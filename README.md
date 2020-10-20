@@ -15,3 +15,6 @@
 - [괄호 변환](./2020%20KAKAO%20BLIND%20RECRUITMENT/괄호%20변환.py)
 - [자물쇠와 열쇠](./2020%20KAKAO%20BLIND%20RECRUITMENT/자물쇠와%20열쇠.py)
 - [가사 검색](./2020%20KAKAO%20BLIND%20RECRUITMENT/가사%20검색.py)
+- [기둥과 보 설치](./2020%20KAKAO%20BLIND%20RECRUITMENT/기둥과%20보%20설치/Solution.java)
+- [외벽 점검](./2020%20KAKAO%20BLIND%20RECRUITMENT/외벽%20점검/solution.py)
+- [블록 이동하기](2020%20KAKAO%20BLIND%20RECRUITMENT/블록%20이동하기/solution.py)
