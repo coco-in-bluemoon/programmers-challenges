@@ -21,3 +21,4 @@
 
 ### [Summer/Winter Coding(2019)](./Summer%20Winter%20Coding(2019)/README.md)
 - [멀쩡한 사각형](./Summer%20Winter%20Coding(2019)/멀쩡한%20사각형/solution.py)
+- [지형 이동](./Summer%20Winter%20Coding(2019)/지형%20이동/solution.py)
