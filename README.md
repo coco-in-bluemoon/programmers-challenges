@@ -18,3 +18,6 @@
 - [기둥과 보 설치](./2020%20KAKAO%20BLIND%20RECRUITMENT/기둥과%20보%20설치/Solution.java)
 - [외벽 점검](./2020%20KAKAO%20BLIND%20RECRUITMENT/외벽%20점검/solution.py)
 - [블록 이동하기](2020%20KAKAO%20BLIND%20RECRUITMENT/블록%20이동하기/solution.py)
+
+### [Summer/Winter Coding(2019)](./Summer%20Winter%20Coding(2019)/README.md)
+- [멀쩡한 사각형](./Summer%20Winter%20Coding(2019)/멀쩡한%20사각형/solution.py)
