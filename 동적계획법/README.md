@@ -7,3 +7,8 @@
 ### 정수 삼각형
 [Python](./정수%20삼각형/solution.py)
 - DP
+
+### 등굣길
+[Python](./등굣길/solution.py)
+- DP
+- 길찾기 문제는 위와 왼쪽을 기준으로 DP
