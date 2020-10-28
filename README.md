@@ -40,5 +40,8 @@
 - [등굣길](동적계획법/등굣길/solution.py)
 - [도둑질](동적계획법/도둑질/solution.py)
 
+### [이분탐색](이분탐색/README.md)
+- [징검다리](이분탐색/징검다리/solution.py)
+
 ### [Level 4 연습문제](Level%204%20연습문제/README.md)
 - [3xn 타일링](Level%204%20연습문제/3xn%20타일링/solution.py)
