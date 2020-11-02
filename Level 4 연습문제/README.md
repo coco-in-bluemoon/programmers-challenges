@@ -18,3 +18,8 @@
 [Python](올바른%20괄호의%20갯수/solution.py)
 - Dynamic Programming
 - "카탈란 수"라는 특이한 성질의 수열 활용하면 빠르다
+
+### 최적의 행렬 곱셈 ✔︎
+[Python](최적의%20행렬%20곱셈/solution.py)
+- Dynamic Programming
+- 두 행렬 사이의 거리를 기준으로 점진적 확대
