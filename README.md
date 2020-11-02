@@ -52,3 +52,4 @@
 ### [Level 4 연습문제](Level%204%20연습문제/README.md)
 - [3xn 타일링](Level%204%20연습문제/3xn%20타일링/solution.py)
 - [선입 선출 스케줄링](Level%204%20연습문제/선입%20선출%20스케줄링/solution.py)
+- [숫자 블록](Level%204%20연습문제/숫자%20블록/solution.py)
