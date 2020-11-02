@@ -13,3 +13,8 @@
 [Python](숫자%20블록/solution.py)
 - 소수 판별 알고리즘
 - 가능한 값의 최대값이 제한되어 있다.
+
+### 올바른 괄호의 갯수
+[Python](올바른%20괄호의%20갯수/solution.py)
+- Dynamic Programming
+- "카탈란 수"라는 특이한 성질의 수열 활용하면 빠르다
