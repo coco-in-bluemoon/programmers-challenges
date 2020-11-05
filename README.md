@@ -45,6 +45,15 @@
 - [호텔 방 배정](2019%20카카오%20개발자%20겨울%20인턴십/호텔%20방%20배정/solution.py)
 - [징검다리 건너기](2019%20카카오%20개발자%20겨울%20인턴십/징검다리%20건너기/solution.py)
 
+### [2019 KAKAO BLIND RECRUITMENT](2019%20KAKAO%20BLIND%20RECRUITMENT/README.md)
+- [길 찾기 게임](2019%20KAKAO%20BLIND%20RECRUITMENT/길%20찾기%20게임/solution.py)
+- [매칭 점수](2019%20KAKAO%20BLIND%20RECRUITMENT/매칭%20점수/solution.py)
+- [무지의 먹방 라이브](2019%20KAKAO%20BLIND%20RECRUITMENT/무지의%20먹방%20라이브/solution.py)
+- [블록 게임](2019%20KAKAO%20BLIND%20RECRUITMENT/블록%20게임/solution.py)
+- [실패율](2019%20KAKAO%20BLIND%20RECRUITMENT/실패율/solution.py)
+- [오픈채팅방](2019%20KAKAO%20BLIND%20RECRUITMENT/오픈채팅방/solution.py)
+- [후보키](2019%20KAKAO%20BLIND%20RECRUITMENT/후보키/solution.py)
+
 ## 코딩테스트 고득점 KIT
 ### [동적계획법](./동적계획법/README.md)
 - [N으로 표현](동적계획법/N으로%20표현/solution.py)
