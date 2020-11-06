@@ -1,64 +1,64 @@
 from collections import deque
 import sys
-sys.setrecursionlimit(10000)
+sys.setrecursionlimit(10**5)
 
 
 class Node:
-    def __init__(self, name, x, y):
-        self.name = name
+    def __init__(self, x, y, label):
         self.coord = (x, y)
+        self.label = label
         self.left = None
         self.right = None
 
     def __str__(self):
-        message = f'Node {self.name} @ {self.coord}'
-        return message
+        left_child = self.left.label if self.left else None
+        right_child = self.right.label if self.right else None
+        return f'{self.label}  @{self.coord}\tL:{left_child}\tR:{right_child}'
 
 
 class BinaryTree:
     def __init__(self):
         self.root = None
 
+    def insert(self, x, y, label):
+        new_node = Node(x, y, label)
+        if not self.root:
+            self.root = new_node
+            return
+
+        node = self.root
+        while True:
+            if node.coord[0] > new_node.coord[0]:
+                if node.left:
+                    node = node.left
+                else:
+                    node.left = new_node
+                    break
+            elif node.coord[0] < new_node.coord[0]:
+                if node.right:
+                    node = node.right
+                else:
+                    node.right = new_node
+                    break
+
     def _traverse_preorder(self, node, visited):
-        visited.append(node.name)
+        visited.append(node.label)
         if node.left:
             self._traverse_preorder(node.left, visited)
         if node.right:
             self._traverse_preorder(node.right, visited)
 
-    def insert_node(self, name, x, y):
-        node_new = Node(name, x, y)
-
-        if not self.root:
-            self.root = node_new
-            return
-
-        node = self.root
-        while True:
-            if node.coord[0] < node_new.coord[0]:
-                if node.right:
-                    node = node.right
-                else:
-                    node.right = node_new
-                    break
-            elif node.coord[0] > node_new.coord[0]:
-                if node.left:
-                    node = node.left
-                else:
-                    node.left = node_new
-                    break
+    def traverse_preorder(self):
+        visited = list()
+        self._traverse_preorder(self.root, visited)
+        return visited
 
     def _traverse_postorder(self, node, visited):
         if node.left:
             self._traverse_postorder(node.left, visited)
         if node.right:
             self._traverse_postorder(node.right, visited)
-        visited.append(node.name)
-
-    def traverse_preorder(self):
-        visited = list()
-        self._traverse_preorder(self.root, visited)
-        return visited
+        visited.append(node.label)
 
     def traverse_postorder(self):
         visited = list()
@@ -66,36 +66,41 @@ class BinaryTree:
         return visited
 
     def __str__(self):
-        message = str()
-        queue = deque([self.root])
+        binary_tree_str = ''
+        queue = deque([])
+        if self.root:
+            queue.append(self.root)
         while queue:
             node = queue.popleft()
-            if node:
-                message += node.__str__()
-                message += '\n'
+            binary_tree_str += node.__str__()
+            binary_tree_str += '\n'
+
             if node.left:
                 queue.append(node.left)
             if node.right:
                 queue.append(node.right)
 
-        return message
+        return binary_tree_str
 
 
 def solution(nodeinfo):
-    nodeinfo_with_name = list()
-    tree = BinaryTree()
+    nodeinfo_with_label = list()
     for idx, (x, y) in enumerate(nodeinfo):
-        nodeinfo_with_name.append([x, y, idx+1])
-    nodeinfo_with_name =\
-        sorted(nodeinfo_with_name, key=lambda x: (-x[1], x[0]))
+        label = idx + 1
+        nodeinfo_with_label.append([x, y, label])
+    nodeinfo_with_label = sorted(
+        nodeinfo_with_label,
+        key=lambda x: (-x[1], x[0])
+    )
 
-    for x, y, name in nodeinfo_with_name:
-        tree.insert_node(name, x, y)
+    tree = BinaryTree()
+    for x, y, label in nodeinfo_with_label:
+        tree.insert(x, y, label)
 
-    answer = list()
-    answer.append(tree.traverse_preorder())
-    answer.append(tree.traverse_postorder())
-    return answer
+    visited_preorder = tree.traverse_preorder()
+    visited_postorder = tree.traverse_postorder()
+
+    return [visited_preorder, visited_postorder]
 
 
 if __name__ == "__main__":

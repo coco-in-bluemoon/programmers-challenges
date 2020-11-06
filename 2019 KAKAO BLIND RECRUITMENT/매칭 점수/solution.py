@@ -1,70 +1,78 @@
+import enum
 import re
+from re import sub
 
 
 def extract_page_by_tag(page, tag):
+    assert tag in ['head', 'body']
+
     start_tag = f'<{tag}>'
     end_tag = f'</{tag}>'
 
     start_index = page.find(start_tag) + len(start_tag)
     end_index = page.find(end_tag)
 
-    page_by_tag = page[start_index:end_index]
-    page_by_tag = re.sub(r'[\s][\s]+', '', page_by_tag)
-    page_by_tag = re.sub(r'^[\s]', '', page_by_tag)
-    page_by_tag = re.sub(r'[\s]$', '', page_by_tag)
+    subpage = page[start_index:end_index]
+    subpage = re.sub(r'[\s][\s]+', ' ', subpage)
+    subpage = re.sub(r'^[\s]', '', subpage)
+    subpage = re.sub(r'[\s]$', '', subpage)
 
-    return page_by_tag
+    return subpage
 
 
 def extract_link_from_head(page):
-    pattern = r'<meta property="og:url" content="(https://.*?)"'
-    link = re.search(pattern, page)
-    return link.group(1)
+    pattern = r'<meta property="og:url" content="(https://[^\s]+)"[\s]?/>'
+    matched_expression = re.search(pattern, page)
+    link = matched_expression.group(1)
+    return link
 
 
-def calculate_base_score(word, page):
-    return re.sub(r'[^a-z]', '.', page).split('.').count(word)
-
-
-def extract_outer_links(page):
-    pattern = r'<a href="(https://.*?)"'
+def extract_outer_link_from_body(page):
+    pattern = r'<a href="(https://[^\s]+)"[\s]?>'
     outer_links = re.findall(pattern, page)
     return outer_links
 
 
+def count_word_in_body(word, page):
+    page = re.sub(r'[^a-z]', '.', page)
+    return page.split('.').count(word)
+
+
 def solution(word, pages):
+    word = word.lower()
     head_pages = list()
     body_pages = list()
-
     for page in pages:
         page = page.lower()
-        page_head = extract_page_by_tag(page, 'head')
-        page_body = extract_page_by_tag(page, 'body')
+        head_page = extract_page_by_tag(page, 'head')
+        body_page = extract_page_by_tag(page, 'body')
 
-        head_pages.append(page_head)
-        body_pages.append(page_body)
+        head_pages.append(head_page)
+        body_pages.append(body_page)
 
     link2page = dict()
-    for page_id, page in enumerate(head_pages):
+    for idx, page in enumerate(head_pages):
         link = extract_link_from_head(page)
-        link2page[link] = page_id
+        link2page[link] = idx
 
     base_scores = list()
-    word = word.lower()
     for page in body_pages:
-        base_score = calculate_base_score(word, page)
+        base_score = count_word_in_body(word, page)
         base_scores.append(base_score)
 
     scores = [score for score in base_scores]
-    for page_id, page in enumerate(body_pages):
-        outer_links = extract_outer_links(page)
+    for idx, page in enumerate(body_pages):
+        outer_links = extract_outer_link_from_body(page)
         n_links = len(outer_links)
         for outer_link in outer_links:
-            if outer_link in link2page:
-                target_page_id = link2page[outer_link]
-                scores[target_page_id] += (base_scores[page_id] / n_links)
+            if outer_link not in link2page:
+                continue
+            target_page = link2page[outer_link]
+            scores[target_page] += (base_scores[idx] / n_links)
+
     max_score = max(scores)
-    return scores.index(max_score)
+    answer = scores.index(max_score)
+    return answer
 
 
 if __name__ == "__main__":
