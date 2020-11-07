@@ -6,14 +6,12 @@ def count_number_of_traffic(base_time, times):
     base_time_end = base_time + datetime.timedelta(seconds=0.999)
 
     for start_time, end_time in times:
-        if end_time < base_time:
-            continue
-        elif base_time <= end_time <= base_time_end:
+        if base_time <= end_time <= base_time_end:
             counter += 1
         elif base_time <= start_time <= base_time_end:
             counter += 1
-        elif base_time_end < start_time:
-            break
+        elif start_time <= base_time <= base_time_end <= end_time:
+            counter += 1
     return counter
 
 
@@ -26,8 +24,13 @@ def solution(lines):
             f'{date_str} {time_str}', '%Y-%m-%d %H:%M:%S.%f'
         )
 
-        duration = float(duration_str.replace('s', '')) - 0.001
-        start_time = end_time - datetime.timedelta(seconds=duration)
+        duration = datetime.timedelta(
+            seconds=float(duration_str.replace('s', ''))
+        )
+        correction = datetime.timedelta(
+            seconds=0.001
+        )
+        start_time = end_time - duration + correction
 
         times.append((start_time, end_time))
 

@@ -54,6 +54,15 @@
 - [오픈채팅방](2019%20KAKAO%20BLIND%20RECRUITMENT/오픈채팅방/solution.py)
 - [후보키](2019%20KAKAO%20BLIND%20RECRUITMENT/후보키/solution.py)
 
+### [2018 KAKAO BLIND RECRUITMENT](2018%20KAKAO%20BLIND%20RECRUITMENT/README.md)
+- [뉴스 클러스터링](2018%20KAKAO%20BLIND%20RECRUITMENT/뉴스%20클러스터링/solution.py)
+- [다트 게임](2018%20KAKAO%20BLIND%20RECRUITMENT/다트%20게임/solution.py)
+- [비밀지도](2018%20KAKAO%20BLIND%20RECRUITMENT/비밀지도/solution.py)
+- [셔틀버스](2018%20KAKAO%20BLIND%20RECRUITMENT/셔틀버스/solution.py)
+- [추석 트래픽](2018%20KAKAO%20BLIND%20RECRUITMENT/추석%20트래픽/solution.py)
+- [캐시](2018%20KAKAO%20BLIND%20RECRUITMENT/캐시/solution.py)
+- [프렌즈4블록](2018%20KAKAO%20BLIND%20RECRUITMENT/프렌즈4블록/solution.py)
+
 ## 코딩테스트 고득점 KIT
 ### [동적계획법](./동적계획법/README.md)
 - [N으로 표현](동적계획법/N으로%20표현/solution.py)
