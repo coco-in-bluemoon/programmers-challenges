@@ -62,6 +62,11 @@
 - [추석 트래픽](2018%20KAKAO%20BLIND%20RECRUITMENT/추석%20트래픽/solution.py)
 - [캐시](2018%20KAKAO%20BLIND%20RECRUITMENT/캐시/solution.py)
 - [프렌즈4블록](2018%20KAKAO%20BLIND%20RECRUITMENT/프렌즈4블록/solution.py)
+- [방금그곡](2018%20KAKAO%20BLIND%20RECRUITMENT/방금그곡/solution.py)
+- [압축](2018%20KAKAO%20BLIND%20RECRUITMENT/압축/solution.py)
+- [자동완성](2018%20KAKAO%20BLIND%20RECRUITMENT/자동완성/solution.py)
+- [파일명 정렬](2018%20KAKAO%20BLIND%20RECRUITMENT/파일명%20정렬/solution.py)
+- [n진수 게임](2018%20KAKAO%20BLIND%20RECRUITMENT/n진수%20게임/solution.py)
 
 ## 코딩테스트 고득점 KIT
 ### [동적계획법](./동적계획법/README.md)

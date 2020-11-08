@@ -29,3 +29,23 @@
 ### 프렌즈4블록
 [Python](프렌즈4블록/solution.py)
 - 보드 기반 시뮬레이션
+
+### 방금그곡
+[Python](방금그곡/solution.py)
+- 샾 문자열 처리
+
+### 압축
+[Python](압축/solution.py)
+- 설명대로 맵 자료구조 잘 구축하기
+
+### 자동완성
+[Python](자동완성/solution.py)
+- 트라이 자료구조
+
+### 파일명 정렬
+[Python](파일명%20정렬/solution.py)
+- 문자열 처리를 통한 분해 + 정렬
+
+### n진수 게임
+[Python](n진수%20게임/solution.py)
+- 진법 변환 + 시뮬레이션
