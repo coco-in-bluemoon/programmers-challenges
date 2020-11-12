@@ -26,7 +26,9 @@
 ### [Summer/Winter Coding(~2018)](Summer%20Winter%20Coding(~2018)/README.md)
 - [방문 길이](Summer%20Winter%20Coding(~2018)/방문%20길이/solution.py)
 - [배달](Summer%20Winter%20Coding(~2018)/배달/solution.py)
+- [소수 만들기](Summer%20Winter%20Coding(~2018)/소수%20만들기/solution.py)
 - [스킬트리](Summer%20Winter%20Coding(~2018)/스킬트리/solution.py)
+- [스티머 모으기(2)](Summer%20Winter%20Coding(~2018)/스티커%20모으기(2)/solution.py)
 - [쿠키 구입](Summer%20Winter%20Coding(~2018)/쿠키%20구입/solution.py)
 
 ### [월간 코드 챌린지 시즌 1](./월간%20코드%20챌린지%20시즌%201/README.md)
